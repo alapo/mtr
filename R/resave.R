@@ -14,11 +14,16 @@ resave <- function(..., list = character(), file) {
   if (file.exists(file) == FALSE){
     delete_me = data.frame()
     save(delete_me, file = file)
+    rm(delete_me)
   } else if (file.exists(file) == TRUE){
     previous  <- load(file)
+
+    if (sjmisc::str_contains(previous, "delete_me") == TRUE){
+      previous <- previous[previous != "delete_me"]
+    }
+
     var.names <- c(list, as.character(substitute(list(...)))[-1L])
     for (var in var.names) assign(var, get(var, envir = parent.frame()))
-    rm(delete_me) # remove the file we created
     save(list = unique(c(previous, var.names)), file = file)
   }
 }
