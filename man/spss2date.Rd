@@ -15,5 +15,5 @@ spss2date(x)
 
 }
 \description{
-Used to convert SPSS dates
+Used to convert SPSS dates.   # src: https://stackoverflow.com/questions/37880975/spss-date-format-when-imported-into-r
 }

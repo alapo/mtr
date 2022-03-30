@@ -15,5 +15,5 @@ clear.labels(x)
 
 }
 \description{
-clears labels from your df
+clears labels from your df   # src: https://stackoverflow.com/questions/2394902/remove-variable-labels-attached-with-foreign-hmisc-spss-import-functions
 }
