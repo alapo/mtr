@@ -1,6 +1,6 @@
 #' spss2date
 #'
-#' This function will save an RData file, if one does not exists it will create it.
+#' Used to convert SPSS dates
 #'
 #' @param list List of files from your environment you want to save
 #' @param file Name of the RData file you want to save
@@ -11,6 +11,17 @@
 spss2date <- function(x) as.Date(x/86400, origin = "1582-10-14")
 
 # ▬ clear.labels ------
+#' clear.labels
+#'
+#' clears labels from your df
+#'
+#' @param list List of files from your environment you want to save
+#' @param file Name of the RData file you want to save
+#'
+#' @return
+#' @export
+#'
+
 # src: https://stackoverflow.com/questions/2394902/remove-variable-labels-attached-with-foreign-hmisc-spss-import-functions
 clear.labels <- function(x) {
   if(is.list(x)) {
@@ -26,10 +37,31 @@ clear.labels <- function(x) {
 }
 
 # my_rowmeans ----------
+#' my_rowmeans
+#'
+#' take row means. Used in A-CAP project
+#'
+#' @param list List of files from your environment you want to save
+#' @param file Name of the RData file you want to save
+#'
+#' @return
+#' @export
+#'
 my_rowmeans = function(...) Reduce(`+`, list(...))/length(list(...))
 
 
 # ▬ say_something -----
+# say_something ----------
+#' say_something
+#'
+#' Used to tap into Windows text-to-speech. Will only work on Windows-based machines.
+#'
+#' @param list List of files from your environment you want to save
+#' @param file Name of the RData file you want to save
+#'
+#' @return
+#' @export
+#'
 say_something <- function(message , voice) {
 
   voice <- paste0("\"$speak.SelectVoice('Microsoft ", voice, " Desktop');" )
