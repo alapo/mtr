@@ -51,7 +51,6 @@ my_rowmeans = function(...) Reduce(`+`, list(...))/length(list(...))
 
 
 # ▬ say_something -----
-# say_something ----------
 #' say_something
 #'
 #' Used to tap into Windows text-to-speech. Will only work on Windows-based machines.
@@ -75,3 +74,15 @@ say_something <- function(message , voice) {
                    message
           ))
 }
+
+#' !in
+#'
+#' Negate the %in% function
+#'
+#' @param list List of files from your environment you want to save
+#' @param file Name of the RData file you want to save
+#'
+#' @return
+#' @export
+#'
+`%!in%` = Negate(`%in%`)

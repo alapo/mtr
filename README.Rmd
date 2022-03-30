@@ -18,15 +18,23 @@ knitr::opts_chunk$set(
 <!-- badges: start -->
 <!-- badges: end -->
 
-The goal of mtr is to ...
+mtr stands for "Misc Tools for R" which is my collection of functions that I have either made or gathered throughout my data science projects. Most are nothing special, but they solve unique problems I could not find in other packages (or are slightly tweaked).
 
 ## Installation
 
-You can install the released version of mtr from [CRAN](https://CRAN.R-project.org) with:
+To install these functions use the pacman lines 
+
+``` r
+if (!require("pacman")) install.packages("pacman")
+pacman::p_load_gh("alapo/mtr")
+```
+
+or you can use the devtools lines below.
 
 ``` r
 devtools::install_github("alapo/mtr")
 ```
+
 
 ## Example
 
