@@ -3,3 +3,4 @@
 export(hello)
 export(rename)
 export(resave)
+export(spss2date)
